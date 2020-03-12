@@ -1,22 +1,5 @@
-# Ajax
-使用js手动封装ajax函数  
-1、ajax函数，用于向后台发送请求，请求之后返回数据，或者什么都不返回，只单纯地向后台发送请求  
-2、ajax函数一般接收这几个形参，请求方式、请求地址（接口）、发送数据等  
-3、ajax封装过程  
-1）创建ajax对象  
-2）初始化 HTTP 请求参数(请求方式, 地址, 同步异步)   
-3）发送请求  
-4）监控数据  
-5）检查数据，使用数据  
-
-``` function ajax(method, url, callback, data, flag) {
-    形参  
-    method：请求方式  
-    url：请求地址  
-    callback：回调函数  
-    data：发送的数据  
-    flag：同步还是异步  
-    // （1） 创建ajax对象 
+function ajax(method, url, callback, data, flag) {
+    // （2） ajax对象 
     var xml = null;
     // IE6及以下没有这个方法，进行兼容性处理
     // 如果当前浏览器的window中有XMLHttpRequest，就令xml=new XMLHttpRequest()
@@ -53,4 +36,4 @@
             }
         }
     }
-}```
+}
